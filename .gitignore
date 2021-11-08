@@ -1,0 +1,8 @@
+node_modules
+build
+__mocks__
+.idea
+yarn-error.log
+yarn.lock
+.env
+coverage
