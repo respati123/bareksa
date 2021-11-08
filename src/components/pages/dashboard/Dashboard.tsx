@@ -59,13 +59,17 @@ const Dashboard = () => {
     const result = await BaseApi('token').get('/takehometest/web/dashboard');
     return result.data;
   });
-
+  const [date, setDate] = useState();
   const [dataTable, setDataTable] = useState();
   const [loadingFilter, setLoadingFilter] = useState<boolean>(false);
 
   const handleFilter = useCallback(
     ({ startDate, endDate }) => {
       setLoadingFilter(true);
+      setDate({
+        startDate,
+        endDate,
+      });
       const paramStartDate = moment(startDate).unix();
       const paramEndDate = moment(endDate).unix();
 
@@ -115,8 +119,8 @@ const Dashboard = () => {
             <ChartPolar data={dataTable} isLoading={loading} />
           </ChartUsers>
           <ChartRevenue>
-            <HeaderChart title="Revenue" isLoading={loading} />
-            <ChartLine />
+            <HeaderChart title="Revenue" isLoading={loading} noFilter />
+            <ChartLine data={dataTable} isLoading={loading} date={date} />
           </ChartRevenue>
         </ChartContent>
 

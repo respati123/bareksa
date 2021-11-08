@@ -33,6 +33,8 @@ module.exports = {
     'jsx-a11y',
   ],
   rules: {
+    'func-names': 'off',
+    'guard-for-in': 'off',
     'react/no-array-index-key': 'off',
     'no-nested-ternary': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',

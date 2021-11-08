@@ -73,7 +73,7 @@ const Calendar = (props: CalendarProps) => {
                 <DayComponent
                   onClick={() => handleClickDay(day)}
                   key={`day-${index}`}
-                  onToday={value?.isSame(day, 'day')}
+                  // onToday={value?.isSame(day, 'day')}
                   onSelected={
                     startDate?.isSame(day, 'day') || endDate?.isSame(day, 'day')
                   }
