@@ -1,0 +1,13 @@
+node_modules
+__mocks__
+.idea
+.env.example
+.eslintgitignore
+.eslintrc.js
+.gitignore
+.lintstagedrc
+.prettierrc
+jest.*
+yarn.*
+yarn-error.log
+.husky
