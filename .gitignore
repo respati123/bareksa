@@ -4,5 +4,4 @@ __mocks__
 .idea
 yarn-error.log
 yarn.lock
-.env
 coverage
