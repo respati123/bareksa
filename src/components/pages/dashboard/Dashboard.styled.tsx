@@ -23,6 +23,10 @@ export const ChartContent = styled(Box)`
   @media ${device.tablet} {
     flex-direction: column;
   }
+
+  @media ${device.laptopL} {
+    justify-content: space-around;
+  }
 `;
 
 export const ChartConversion = styled(CardStyled)`

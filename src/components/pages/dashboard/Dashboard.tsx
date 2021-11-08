@@ -175,6 +175,10 @@ const ContainerBoxTable = styled(Box)`
   @media ${device.tablet} {
     flex-direction: column;
   }
+
+  @media ${device.laptop} {
+    flex-direction: column;
+  }
 `;
 
 const BoxStatus = styled.div<{ data: string }>`
